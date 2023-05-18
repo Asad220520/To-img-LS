@@ -91,7 +91,7 @@ td button {
   }
 
   .form {
-    width: 100%;
+    width: 90%;
   }
 
   .btn {
@@ -99,13 +99,13 @@ td button {
   }
 
   .table {
-    width: 100%;
+    width: 90%;
   }
 }
 
 @media (max-width: 480px) {
   .form {
-    width: 100%;
+    width: 90%;
   }
 
   .btn {
@@ -113,6 +113,6 @@ td button {
   }
 
   .table {
-    width: 100%;
+    width: 90%;
   }
 }
