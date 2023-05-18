@@ -4,6 +4,9 @@
   box-sizing: border-box;
   list-style: none;
 }
+.container{
+  padding: 0 15px;
+}
 html,
 body {
   height: 100vh;
@@ -79,4 +82,37 @@ td button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 10px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 10px 0 0;
+  }
+
+  .table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    width: 100%;
+  }
+
+  .btn {
+    margin: 10px 0 0;
+  }
+
+  .table {
+    width: 100%;
+  }
 }
