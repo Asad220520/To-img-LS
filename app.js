@@ -20,20 +20,36 @@ function view() {
 }
 view();
 
+imgInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    addTask()
+  }
+})
+imgName.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    addTask()
+  }
+})
+
+
 function addTask() {
-  table.innerHTML = "";
-  const task = JSON.parse(localStorage.getItem("task")) || [];
-  const newTask = {
-    id: task.length ? task[task.length - 1] : 1,
-    img: img.src = imgInput.value,
-    title: imgName.value,
-  };
-  const result = [...task, newTask];
-  localStorage.setItem("task", JSON.stringify(result));
-  view();
-  imgInput.value = "";
-  imgName.value = "";
-  img.src = "";
+  if (imgInput.value === '' ||imgName.value === '' ) {
+    alert('Заполните поле ввода')
+  }else{
+    table.innerHTML = "";
+    const task = JSON.parse(localStorage.getItem("task")) || [];
+    const newTask = {
+      id: task.length ? task[task.length - 1] : 1,
+      img: img.src = imgInput.value,
+      title: imgName.value,
+    };
+    const result = [...task, newTask];
+    localStorage.setItem("task", JSON.stringify(result));
+    view();
+    imgInput.value = "";
+    imgName.value = "";
+    img.src = "";
+  }
 }
 
 
